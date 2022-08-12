@@ -19,17 +19,13 @@ const favoriteReducers = (state, action) => {
         return state;
       }
     }
-    
-    
+     
 const Characters = () => {
   const [favorites, dispatch] = useReducer(favoriteReducers, initialState);
   const [search, setSearch] = useState('');
-  
   const searchInput = useRef(null);
-  
   const characters = useCharacters(API);
   
-
   const handleClick = favorite => {
     dispatch({type: 'ADD_TO_FAVORITE', payload: favorite})
   }
